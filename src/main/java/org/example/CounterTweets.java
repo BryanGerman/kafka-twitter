@@ -3,7 +3,6 @@ package org.example;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
-import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StreamsBuilder;
@@ -16,10 +15,10 @@ import org.slf4j.LoggerFactory;
 import java.util.Collections;
 import java.util.Properties;
 
-public class ConsumerTwitter {
+public class CounterTweets {
 
     public static final ObjectMapper objectMapper = new ObjectMapper();
-    private static final Logger log = LoggerFactory.getLogger(ConsumerTwitter.class);
+    private static final Logger log = LoggerFactory.getLogger(CounterTweets.class);
     public static void main(String[] args){
         log.info("I am a Kafka Consumer");
         String bootstrapServers = "localhost:9092";
